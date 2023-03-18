@@ -1,0 +1,9 @@
+local module = {}
+
+local HTTP = game:GetService("HttpService")
+function HttpGETRequest(url)
+	return game:HttpGet(url,true)
+end
+function GetRandomInsult()
+    return HttpGETRequest("https://insult.mattbas.org/api/insult")
+end
