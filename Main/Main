@@ -4,6 +4,10 @@ local HTTP = game:GetService("HttpService")
 function HttpGETRequest(url)
 	return game:HttpGet(url,true)
 end
-function GetRandomInsult()
+function module:GetRandomInsult()
     return HttpGETRequest("https://insult.mattbas.org/api/insult")
 end
+--[[
+local module = loadstring(game:HttpGet("https://raw.githubusercontent.com/x203f/RBXRoastAPI/main/Main/Main",true))()
+print(module:GetRandomInsult())
+--]]
